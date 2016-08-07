@@ -1,0 +1,1923 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Homepage - InfinityStrap</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet">
+
+  <!-- Documentation extras -->
+  <link href="assets/css/docs.css" rel="stylesheet">
+  <link href="assets/css/pygments-manni.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="assets/ico/favicon.png">
+</head>
+<body>
+<header class="navbar navbar-inverse navbar-fixed-top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="index.html" class="navbar-brand">InfinityStrap</a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li class="active"><a href="extend.html">Extend</a></li>
+        <li><a href="css.html">Base CSS</a></li>
+        <li><a href="components.html">Components</a></li>
+        <li><a href="javascript.html">JavaScript</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <!-- Docs page layout -->
+    <div class="bs-header" id="content">
+      <div class="container">
+        <h1>Extending Bootstrap</h1>
+        <p>Extend Bootstrap to take advantage of included styles and components.</p>
+      </div>
+    </div>
+
+
+    <div class="container bs-docs-container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="bs-sidebar hidden-print" role="complementary">
+            <ul class="nav bs-sidenav">
+              <li><a href="#prettycheckable">Pretty Checkable</a></li>
+              <li><a href="#StyledSelect">Styled Select</a></li>
+              <li><a href="#rowlink">Row Link</a></li>
+              <li><a href="#inputmask">Input Mask</a></li>
+              <li><a href="#maxlength">Max Length</a></li>
+              <li><a href="#googlemaps">Google Maps</a></li>
+              <li>
+                <a href="#datepicker">Pickers (date and color)</a>
+                <ul class="nav">
+                  <li><a href="#datepicker">Date</a></li>
+                  <li><a href="#colorpicker">Color</a></li>
+                </ul>
+              </li>
+              <li><a href="#verticalalign">Vertical Align</a></li>
+              <li><a href="#responsivevideo">Responsive Video</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
+              <li><a href="#flicker">Flickr Gallery</a></li>
+              <li><a href="#pricing">Pricing Table</a></li>
+              <li><a href="#progress">Radial Progress Bars</a></li>
+              <li>
+                <a href="#apopover">Animations</a>
+                <ul class="nav">
+                  <li><a href="#apopover">Popovers</a></li>
+                  <li><a href="#atabs">Tabs</a></li>
+                  <li><a href="#aicons">Icons</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-9" role="main">
+
+        <section id="prettycheckable" class="bs-docs-section">
+          <div class="page-header">
+            <h1>Pretty checkbox / radio <small>(using <a href="http://arthurgouveia.com/prettyCheckable/" target="_blank">prettyCheckable</a>)</small></h1>
+          </div>
+          <p>For more info and advanced options please visit the plugin page: <a href="http://arthurgouveia.com/prettyCheckable/" target="_blank">http://arthurgouveia.com/prettyCheckable/</a></p>
+          <form class="bs-example">
+            <label class="checkbox">
+              <input type="checkbox" class="pretty" data-label="Option one is this and that—be sure to include why it's great">
+            </label>
+            <br>
+            <label class="radio">
+              <input type="radio" name="optionsRadios" class="pretty" id="optionsRadios1" data-label="Option one is this and that—be sure to include why it's great" checked>
+            </label>
+            <br>
+            <label class="checkbox">
+              <input type="checkbox" class="pretty" data-color="red" data-label="Other colors ? No problem :D For more info just visit the plugin doc" checked>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="pretty" data-color="green" data-label="Other colors ? No problem :D For more info just visit the plugin doc" checked>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="pretty" data-color="yellow" data-label="Other colors ? No problem :D For more info just visit the plugin doc" checked>
+            </label>
+          </form>
+<pre class="highlight">
+<span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input </span><span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"pretty"</span> <span class="na">data-label=</span><span class="s">"..."</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/label&gt;</span>
+
+<span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"radio"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input </span><span class="na">type=</span><span class="s">"radio"</span> <span class="na">class=</span><span class="s">"pretty"</span> <span class="na">data-label=</span><span class="s">"..."</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/label&gt;</span>
+
+<span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input </span><span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"pretty"</span> <span class="na">data-color=</span><span class="s">"red"</span> <span class="na">data-label=</span><span class="s">"..."</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input </span><span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"pretty"</span> <span class="na">data-color=</span><span class="s">"green"</span> <span class="na">data-label=</span><span class="s">"..."</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input </span><span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"pretty"</span> <span class="na">data-color=</span><span class="s">"yellow"</span> <span class="na">data-label=</span><span class="s">"..."</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/label&gt;</span>
+</pre>
+          <h3>In Javascript</h3>
+          <p>Call the plugin with class <code>pretty</code> with a single line of JavaScript:</p>
+<pre class="highlight">
+<span class="nx">$</span><span class="p">(</span><span class="s2">'input.pretty'</span><span class="p">).</span><span class="nx">prettyCheckable</span><span class="p">();</span>
+</pre>
+          <h3>Options</h3>
+          <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-label=""</code>.</p>
+          <table class="table table-bordered table-striped">
+            <thead>
+             <tr>
+               <th style="width: 100px;">Name</th>
+               <th style="width: 150px;">type</th>
+               <th style="width: 50px;">default</th>
+               <th>description</th>
+             </tr>
+            </thead>
+            <tbody>
+             <tr>
+               <td>label</td>
+               <td>string <br> <small><em>Text for your label</em></small></td>
+               <td>''</td>
+               <td>If informed, this will create a label attached to the input.</td>
+             </tr>
+             <tr>
+               <td>labelPosition</td>
+               <td>string <br> <small><em>left, right</em></small></td>
+               <td>right</td>
+               <td>This is the position where the label for the inputs should be placed, if informed. </td>
+             </tr>
+             <tr>
+               <td>customClass</td>
+               <td>string <br> <small><em>A class name.</em></small></td>
+               <td>''</td>
+               <td>This will add a class you want to the wrapping div surrounding the input, created by the plugin.</td>
+             </tr>
+             <tr>
+               <td>color</td>
+               <td>string <br><small><em>blue, green, yellow or red</em></small></td>
+               <td>blue</td>
+               <td>Choose between one of the four colors options.</td>
+             </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="StyledSelect">
+          <div class="page-header">
+            <h1>Styled select <small>(using <a href="http://silviomoreto.github.io/bootstrap-select/" target="_blank">Bootstrap-select</a>)</small></h1>
+          </div>
+          <p>For more info about this plugin and advanced settings please visit plugin page: <a href="http://silviomoreto.github.io/bootstrap-select/" target="_blank">http://silviomoreto.github.io/bootstrap-select/</a></p>
+          <form class="bs-example">
+            <select class="selectpicker">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+            <select class="selectpicker" multiple="multiple" title="Multiple selections">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+            <br>
+            <select class="selectpicker" data-style="btn-primary">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+            <select class="selectpicker" data-style="btn-info">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+            <select class="selectpicker" data-style="btn-success">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+            <select class="selectpicker" data-style="btn-warning">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+            <select class="selectpicker" data-style="btn-danger">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+            <select class="selectpicker" data-style="btn-inverse">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+            <br>
+          </form>
+<pre class="highlight">
+<span class="nt">&lt;select </span><span class="na">class=</span><span class="s">"selectpicker"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/select&gt;</span>
+
+<span class="nt">&lt;select </span><span class="na">class=</span><span class="s">"selectpicker"</span> <span class="na">multiple=</span><span class="s">"multiple"</span> <span class="na">title=</span><span class="s">"Multiple selections"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/select&gt;</span>
+
+<span class="nt">&lt;select </span><span class="na">class=</span><span class="s">"selectpicker"</span> <span class="na">data-style=</span><span class="s">"btn-primary"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/select&gt;</span>
+
+<span class="nt">&lt;select </span><span class="na">class=</span><span class="s">"selectpicker"</span> <span class="na">data-style=</span><span class="s">"btn-info"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/select&gt;</span>
+
+<span class="nt">&lt;select </span><span class="na">class=</span><span class="s">"selectpicker"</span> <span class="na">data-style=</span><span class="s">"btn-success"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/select&gt;</span>
+
+<span class="nt">&lt;select </span><span class="na">class=</span><span class="s">"selectpicker"</span> <span class="na">data-style=</span><span class="s">"btn-warning"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/select&gt;</span>
+
+<span class="nt">&lt;select </span><span class="na">class=</span><span class="s">"selectpicker"</span> <span class="na">data-style=</span><span class="s">"btn-danger"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/select&gt;</span>
+
+<span class="nt">&lt;select </span><span class="na">class=</span><span class="s">"selectpicker"</span> <span class="na">data-style=</span><span class="s">"btn-inverse"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/select&gt;</span>
+</pre>
+
+          <h3>Usage</h3>
+          <p>Create your <code>&lt;select&gt;</code> with the <code>.selectpicker</code> class.</p>
+<pre class="highlight">
+&lt;select class="selectpicker"&gt;
+  &lt;option&gt;Mustard&lt;/option&gt;
+  &lt;option&gt;Ketchup&lt;/option&gt;
+  &lt;option&gt;Relish&lt;/option&gt;
+&lt;/select&gt;
+</pre>
+          <p>Enable Bootstrap-Select via JavaScript:</p>
+<pre class="highlight">
+$('.selectpicker').selectpicker();
+</pre>
+          <p>Options can be passed via data attributes or JavaScript.</p>
+<pre class="highlight">
+$('.selectpicker').selectpicker({
+    style: 'btn-info',
+    size: 4
+});
+</pre>
+
+          <h3>Options</h3>
+          <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-style=""</code>.</p>
+          <table class="table table-bordered table-striped">
+            <thead>
+             <tr>
+               <th style="width: 100px;">Name</th>
+               <th style="width: 100px;">type</th>
+               <th style="width: 50px;">default</th>
+               <th>description</th>
+             </tr>
+            </thead>
+            <tbody>
+              <tr>
+               <td>container</td>
+               <td>string | false</td>
+               <td>false</td>
+               <td>appends the select to a specific element or selector, e.g., <code>container: 'body' | '.main-body'</code></td>
+              </tr>
+              <tr>
+               <td>hideDisabled</td>
+               <td>boolean</td>
+               <td>false</td>
+               <td>removes disabled options and optgroups from the menu <code>data-hide-disabled: true</code></td>
+              </tr>
+              <tr>
+               <td>selectedTextFormat</td>
+               <td>'values' | 'count' | 'count &gt; #' (where # is an integer)</td>
+               <td>null</td>
+               <td>specifies how the selection is displayed with a multiple select (see <a href="http://silviomoreto.github.io/bootstrap-select/#selectTitles">here</a></td>
+              </tr>
+              <tr>
+               <td>countSelectedText</td>
+               <td>string</td>
+               <td>'{0} of {1} selected'</td>
+               <td>sets the format for the text displayed when selectedTextFormat is <code>count</code> or <code>count &gt; #</code>. {0} is the selected amount. {1} is total available for selection.</td>
+              </tr>
+             <tr>
+               <td>size</td>
+               <td>'auto' | integer | false</td>
+               <td>'auto'</td>
+               <td><p>when set to <code>'auto'</code>, the menu always opens up to show as many items as the window will allow without being cut off</p><p>set to <code>false</code> to always show all items</p></td>
+             </tr>
+             <tr>
+               <td>showSubtext</td>
+               <td>boolean</td>
+               <td>false</td>
+               <td>subtext associated with a selected option will be displayed in the button <code>data-show-subtext: true</code></td>
+             </tr>
+             <tr>
+               <td>style</td>
+               <td>string | null</td>
+               <td>null</td>
+               <td><p>apply a class to the button, see <a target="_blank" href="http://twitter.github.io/bootstrap/base-css.html#buttons">bootstrap buttons styles</a></p></td>
+             </tr>
+             <tr>
+               <td>title</td>
+               <td>string | null</td>
+               <td>null</td>
+               <td><p>Set the default text for bootstrap-select</p></td>
+             </tr>
+             <tr>
+               <td>width</td>
+               <td>'auto' | '#px' | '#%' | null (where # is an integer)</td>
+               <td>null</td>
+               <td>
+                  <p><code>auto</code> automatically adjusts the width of the select to accommodate its widest option</p>
+                  <p>set the width of the select manually, e.g. <code>300px</code> or <code>50%</code></p>
+                </td>
+             </tr>
+            </tbody>
+          </table>
+
+        </section>
+
+      <!-- Row link
+      ================================================== -->
+      <section id="rowlink">
+        <div class="page-header">
+          <h1>Row link</h1>
+        </div>
+
+        <h2>Example</h2>
+        <p>This plugin turns a table row into a clickable link.</p>
+        <div class="bs-example">
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr><th>Name</th><th>Description</th><th>Actions</th></tr>
+            </thead>
+            <tbody data-provides="rowlink">
+              <tr><td><a href="./javascript.html#modals" class="rowlink">Modals</a></td><td>A streamlined, but flexible, take on the traditional javascript modal plugin with only the minimum required functionality and smart defaults.</td><td class="nolink"><a href="#">Action</a></td></tr>
+              <tr><td><a href="./javascript.html#dropdowns" class="rowlink">Dropdowns</a></td><td>Add dropdown menus to nearly anything in Bootstrap with this simple plugin. Bootstrap features full dropdown menu support on in the navbar, tabs, and pills.</td><td class="nolink"><a href="#">Action</a></td></tr>
+              <tr><td><a href="./javascript.html#scrollspy" class="rowlink">Scrollspy</a></td><td>Use scrollspy to automatically update the links in your navbar to show the current active link based on scroll position.</td><td class="nolink"><a href="#">Action</a></td></tr>
+              <tr><td><a href="./javascript.html#tabs" class="rowlink">Togglable tabs</a></td><td>Use this plugin to make tabs and pills more useful by allowing them to toggle through tabbable panes of local content.</td><td class="nolink"><a href="#">Action</a></td></tr>
+              <tr><td><a href="./javascript.html#tooltips" class="rowlink">Tooltips</a></td><td>A new take on the jQuery Tipsy plugin, Tooltips don't rely on images, uss CSS3 for animations, and data-attributes for local title storage.</td><td class="nolink"><a href="#">Action</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <pre class="highlight">
+&lt;table data-provides="rowlink"&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;a href="javascript.html#modals"&gt;Modals&lt;/a&gt;
+    &lt;/td&gt;
+    &lt;td class="nolink"&gt;
+      &lt;a href="#"&gt;Action&lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;a href="javascript.html#dropdowns"&gt;Dropdowns&lt;/a&gt;
+    &lt;/td&gt;
+    &lt;td class="nolink"&gt;
+      &lt;a href="#"&gt;Action&lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+        </pre>
+
+
+        <hr class="bs-docs-separator">
+
+
+        <h2>Usage</h2>
+
+        <h3>Via data attributes</h3>
+        <p>Add <code>data-provides="rowlink"</code> to a <code>&lt;table&gt;</code>, <code>&lt;tbody&gt;</code> or <code>&lt;tr&gt;</code> element. The value should be selector to the link, which is a child of the row. A cell can be excluded by adding the <code>.nolink</code> class to the <code>&lt;td&gt;</code>.</p>
+        <p><span class="label label-info">Tip!</span> Add <code>.rowlink</code> to your <code>&lt;a&gt;</code>. This prevents the link styling during page load.</p>
+
+        <h3>Via JavaScript</h3>
+        <p>Call the input mask via javascript:</p>
+        <pre class="highlight">$('tbody.rowlink').rowlink()</pre>
+
+        <h3>Options</h3>
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th style="width: 100px;">Name</th>
+              <th style="width: 50px;">type</th>
+              <th style="width: 100px;">default</th>
+              <th>description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>target</td>
+              <td>string</td>
+              <td>'a'</td>
+              <td>A jquery selector string, to select the link element within each row.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Methods</h3>
+        <h4>.inputmask(options)</h4>
+        <p>Initializes an input with an input mask.</p>
+      </section>
+
+
+      <!-- Input mask
+      ================================================== -->
+      <section id="inputmask">
+        <div class="page-header">
+          <h1>Input mask</h1>
+        </div>
+
+        <h2>Example</h2>
+        <p>Input masks can be used to force the user to enter data conform a specific format.</p>
+        <p>Unlike validation, the user can't enter any other key than the ones specified by the mask.</p>
+        <div class="bs-example">
+          <label>ISBN <input type="text" class="form-control inputmask" data-mask="999-99-999-9999-9"></label>
+        </div>
+<pre class="highlight">&lt;input type="text" data-mask="999-99-999-9999-9"&gt;</pre>
+        <hr class="bs-separator">
+        <h2>Usage</h2>
+
+        <h3>Via data attributes</h3>
+        <p>Add data attributes to register an element with inputmask functionality as shown in the example above.</p>
+
+        <h3>Via JavaScript</h3>
+        <p>Call the input mask via javascript:</p>
+        <pre class="highlight">$('.inputmask').inputmask()</pre>
+
+        <h3>Options</h3>
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th style="width: 100px;">Name</th>
+              <th style="width: 50px;">type</th>
+              <th style="width: 100px;">default</th>
+              <th>description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>mask</td>
+              <td>string</td>
+              <td>''</td>
+              <td>A string of formatting and literal characters, defining the input mask (see below).</td>
+            </tr>
+            <tr>
+              <td>placeholder</td>
+              <td>string</td>
+              <td>'_'</td>
+              <td>The character that is displayed where something needs to be typed.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Format</h3>
+        <table class="table table-striped">
+          <thead>
+            <tr><th>Character</th><th>Description</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>9</td><td>Number</td></tr>
+            <tr><td>a</td><td>Letter</td></tr>
+            <tr><td>?</td><td>Alphanumeric</td></tr>
+            <tr><td>*</td><td>Any character</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Methods</h3>
+        <h4>.inputmask(options)</h4>
+        <p>Initializes an input with an input mask.</p>
+      </section>
+
+
+      <section id="maxlength">
+        <div class="page-header">
+          <h1>Max Length</h1>
+        </div>
+
+        <h2>Default usage</h2>
+        <p>The badge will appear when the remaining chars are 10 or less:</p>
+        <div class="bs-example">
+          <input type="text" maxlength="25" name="defaultconfig" class="form-control" id="defaultconfig" />
+        </div>
+<pre class="highlight"><code class="lang-js linenums">$('input[maxlength]').maxlength();</code></pre>
+        <h2>Change the threshold value</h2>
+        <p>The plugin will show the indicator for remaining chars since the number of chars left are 20.</p>
+        <div class="bs-example">
+          <input type="text" maxlength="25" name="thresholdconfig" class="form-control" id="thresholdconfig" />
+        </div>
+<pre class="highlight">
+$('input.className').maxlength({
+    threshold: 20
+});
+</pre>
+
+        <h2>Few options </h2>
+        <div class="bs-example">
+          <input type="text" maxlength="25" name="moreoptions" class="form-control" id="moreoptions" />
+        </div>
+<pre class="highlight">
+$('input.className').maxlength({
+  alwaysShow: true,
+  threshold: 10,
+  warningClass: "label label-success",
+  limitReachedClass: "label label-important"
+});
+</pre>
+
+        <h2>All the options</h2>
+        <p>This is a complete example where all the options configured for the bootstrap-maxlength counter are setted.</p>
+        <p>Please note: if the <code>alwaysShow</code> option is enabled, the <code>threshold</code> option is ignored.</p>
+        <div class="bs-example">
+          <input type="text" maxlength="25" name="alloptions" class="form-control" id="alloptions" />
+        </div>
+<pre class="highlight">
+$('input.className').maxlength({
+  alwaysShow: true,
+  threshold: 10,
+  warningClass: "label label-success",
+  limitReachedClass: "label label-important",
+  separator: ' of ',
+  preText: 'You have ',
+  postText: ' chars remaining.',
+  validate: true
+});
+</pre>
+
+        <h2>What about textareas?</h2>
+        <p>Bootstrap maxlength supports textarea as well as inputs. Even on old IE.</p>
+        <div class="bs-example">
+          <textarea id="textarea" maxlength="225" rows="2" cols="40" placeholder="This textarea has a limit of 225 chars." class="form-control"></textarea>
+        </div>
+<pre class="highlight">
+$('textarea#textarea').maxlength({
+  alwaysShow: true
+});
+</pre>
+
+        <h2>Let's play with the position</h2>
+        <p>The field counter can be positioned at the top, bottom, left or right. You can also place the maxlength indicator on the corners: bottom-right, top-right, top-left, bottom-left and centered-right.<br />
+          All you need to do is specify the <code>placement</code> option, with one of those strings. If none is specified, the positioning will be defauted to 'bottom'.</p>
+        <div class="bs-example">
+          <input type="text" maxlength="25" name="placement" id="placement" class="form-control" />
+        </div>
+<pre class="highlight">
+$('input#placement').maxlength({
+  alwaysShow: true,
+  placement: 'top-left'
+});
+</pre>
+        </section>
+
+
+
+      <section id="googlemaps">
+        <div class="page-header">
+          <h1>Google Maps</h1>
+        </div>
+        <p>Use Google Maps directly from the data attribute</p>
+        <p>Add class <code>.gmap</code> to a DIV element and set a height</p>
+        <div class="bs-example">
+          <div  class="gmap" 
+                data-zoom="14"
+                data-markers="Jersey City, New Jersey" 
+                style="height: 300px;"> 
+          </div>
+        </div>
+<pre class="highlight">
+&lt;div  class="gmap" 
+      data-zoom="14"
+      data-markers="Jersey City, New Jersey" 
+      style="height: 300px;"&gt; 
+&lt;/div&gt;
+</pre>
+        <p>Include Google Maps API in your page:</p>
+<pre class="highlight">
+&lt;script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"&gt;&lt;/script&gt;
+</pre>
+        <h3>In Javascript</h3>
+<pre class="highlight">
+$('.gmap').each(function(){
+  var d = $(this).data('markers').split(';'),
+      m = [];
+  for(a in d) { m.push({'address' : d[a]}) }
+  $(this).gMap({
+    zoom: $(this).data('zoom'),
+    markers: m
+  });
+})
+</pre>
+        <h3>Options</h3>
+        <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-zoom=""</code>.</p>
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th style="width: 100px;">Name</th>
+              <th style="width: 50px;">type</th>
+              <th style="width: 100px;">default</th>
+              <th>description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>markers</td>
+              <td>string</td>
+              <td>''</td>
+              <td>Set adresses of markers separated by <code>;</code>.</td>
+            </tr>
+            <tr>
+              <td>zoom</td>
+              <td>intenger</td>
+              <td>none</td>
+              <td>Set the zoom level of the map.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+          <!-- Datepicker
+          ================================================== -->
+          <section id="datepicker">
+            <div class="page-header">
+              <h1>Datepicker</h1>
+            </div>
+
+            <div class="bs-example">
+
+              <div class="input-group date" id="dp-input1" data-date="01-01-2013" data-date-format="dd-mm-yyyy">
+                <input class="form-control" size="16" type="text">
+                <span class="input-group-addon"><i class="icon-calendar"></i></span>
+              </div>
+              <br />
+              <div class="input-group date" id="dp-input2" data-date="01-01-2013" data-date-format="dd-mm-yyyy">
+                <span class="input-group-addon"><i class="icon-calendar"></i></span>
+                <input class="form-control" size="16" type="text">
+              </div>
+
+            </div>
+<pre class="highlight">
+&lt;div class="input-group date" id="dp-input1" data-date="01-01-2013" data-date-format="dd-mm-yyyy">
+    &lt;input class="form-control" size="16" type="text">
+    &lt;span class="input-group-addon">&lt;i class="icon-calendar">&lt;/i>&lt;/span>
+&lt;/div>   
+</pre>
+<pre class="highlight">
+$('#dp-input1').datepicker();   
+</pre>                        
+
+
+
+          </section>
+
+          <!-- Colorpicker
+          ================================================== -->
+          <section id="colorpicker">
+            <div class="page-header">
+              <h1>Colorpicker</h1>
+            </div>
+
+            <div class="bs-example">
+
+              <p class="bolder">
+                Attached to a field with hex format specified via options.
+              </p>
+              <input type="text" class="form-control colorpicker" value="#8fff00" >
+            </div>
+              <pre class="highlight">
+&lt;input type="text" class="span1 colorpicker" value="#8fff00" >
+</pre>
+            <div class="bs-example">
+              <p class="bolder">
+                Attachet to a field with the rgba format specified via data tag.
+              </p>
+              <input type="text" class="form-control colorpicker" value="rgb(0,194,255,0.78)" data-color-format="rgba" >
+            </div>
+              <pre class="highlight">
+&lt;input type="text" class="span3 colorpicker" value="rgb(0,194,255,0.78)" data-color-format="rgba" >
+</pre>
+            <div class="bs-example">
+              <p class="bolder">
+                As component.
+              </p>
+              <div class="input-group color colorpicker" data-color="rgb(255, 146, 180)" data-color-format="rgb">
+                <span class="input-group-addon">
+                <i style="background-color: rgb(255, 146, 180); height: 20px; width: 20px;display:block;"></i>
+                </span>
+                <input type="text" class="form-control" value="" readonly="readonly" />
+              </div>
+            </div>
+              <pre class="highlight">
+&lt;div class="input-append color colorpicker" data-color="rgb(255, 146, 180)" data-color-format="rgb">
+  &lt;input type="text" class="span2" value="" readonly="readonly" />
+  &lt;span class="add-on">&lt;i style="background-color: rgb(255, 146, 180)">&lt;/i>&lt;/span>
+&lt;/div>
+</pre>
+            <div class="bs-example">
+              <p class="bolder">
+                Using events to work with the color.
+              </p>
+              <a href="#" class="btn small colorpickerbtn" data-color-format="hex" data-color="rgb(255, 255, 255)">Change background color</a>
+            </div>
+<pre class="highlight">
+&lt;a href="#" class="btn small colorpickerbtn" data-color-format="hex" data-color="rgb(255, 255, 255)">Change...&lt;/a>
+</pre>
+<p><strong>Javascript</strong></p>
+<pre class="highlight">
+$('.colorpickerbtn').colorpicker().on('changeColor', function(ev){
+   $(this)[0].style.background = ev.color.toHex();
+})
+</pre>
+
+            <h2>Javascript</h2>
+            <p>
+              Call the colopicker via javascript:
+            </p>
+            <pre class="highlight">$('.colorpicker').colorpicker()</pre>            
+
+          <h3>Options</h3>
+          <table class="table table-bordered table-striped">
+            <thead>
+             <tr>
+               <th style="width: 100px;">Name</th>
+               <th style="width: 50px;">type</th>
+               <th style="width: 100px;">default</th>
+               <th>description</th>
+             </tr>
+            </thead>
+            <tbody>
+              <tr>
+               <td>format</td>
+               <td>string</td>
+               <td>'hex'</td>
+               <td>the color format - hex | rgb | rgba.</td>
+             </tr>
+            </tbody>
+          </table>
+
+          <h3>Methods</h3>
+          <code><h4>.colorpicker(options)</h4></code>
+          <p>Initializes an colorpicker.</p>
+          <code><h4>.colorpicker('show')</h4></code>
+          <p>Show the color picker</p>
+          <code><h4>.colorpicker('hide')</h4></code>
+          <p>Hide the color picker</p>
+          <code><h4>.colorpicker('place')</h4></code>
+          <p>Updates the color picker's position relative to the element</p>
+          <code><h4>.colorpicker('setValue', value)</h4></code>
+          <p>Set a new value for the color picker. Triggers 'changeColor' event.</p>
+          <h3>Color object methods</h3>
+      <p>Each triggered events have a color object used internally by the picker. This object has several usefull methods.</p>
+          <code><h4>.setColor(value)</h4></code>
+          <p>Set a new color. The value is parsed and tries to do a quess on the format.</p>
+      <code><h4>.setHue(value)</h4></code>
+      <p>Set the HUE with a value between 0 and 1.</p>
+      <code><h4>.setSaturation(value)</h4></code>
+      <p>Set the saturation with a value between 0 and 1.</p>
+      <code><h4>.setLightness(value)</h4></code>
+      <p>Set the lightness with a value between 0 and 1.</p>
+      <code><h4>.setAlpha(value)</h4></code>
+      <p>Set the transparency with a value between 0 and 1.</p>
+      <code><h4>.toRGB()</h4></code>
+      <p>Returns a hash with red, green, blue and alpha.</p>
+      <code><h4>.toHex()</h4></code>
+      <p>Returns a string with HEX format for the current color.</p>
+      <code><h4>.toHSL()</h4></code>
+      <p>Returns a hash with HSLA values.</p>
+      
+          <h3>Events</h3>
+          <p>Colopicker class exposes a few events for manipulating the colors.</p>
+          <table class="table table-bordered table-striped">
+            <thead>
+             <tr>
+               <th style="width: 150px;">Event</th>
+               <th>Description</th>
+             </tr>
+            </thead>
+            <tbody>
+             <tr>
+               <td>show</td>
+               <td>This event fires immediately when the color picker is displayed.</td>
+             </tr>
+             <tr>
+               <td>hide</td>
+               <td>This event is fired immediately when the color picker is hidden.</td>
+             </tr>
+             <tr>
+               <td>changeColor</td>
+               <td>This event is fired when the color is changed.</td>
+             </tr>
+            </tbody>
+          </table>
+
+
+          </section>
+
+          <!-- Vertical Align
+          ================================================== -->
+          <section id="verticalalign">
+            <div class="page-header">
+              <h1>Vertical Align <small>(from GumbyFramework)</small></h1>
+            </div>
+
+            <div class="bs-example">
+
+             <div class="valign">
+                <div style="width: 160px">
+                  <img src="http://www.placehold.it/145x140/EFEFEF/AAAAAA&text=no+image" width="145" />
+                </div>
+                <div>
+                  <h4>This Bootstrap Skin is COOL.</h4>
+                  <p>Face tattoos are not.</p>
+                </div>
+              </div>
+
+            </div>
+<pre class="highlight">
+&lt;div class="valign"&gt;
+  &lt;div&gt;
+    &lt;img src="..." /&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>                      
+          </section>
+
+
+          <!-- Flex Video
+          ================================================== -->
+          <section id="responsivevideo">
+            <div class="page-header">
+              <h1>Responsive Video <small>(from Foundation 4)</small></h1>
+            </div>
+
+            <div class="bs-example">
+              <div class="row">
+                <div class="col-xx-12 col-sm-6 col-md-6">
+                  <div class="flex-video">
+                    <iframe width="500" height="315" src="http://www.youtube.com/embed/c9MnSeYYtYY" frameborder="0" allowfullscreen></iframe>
+                  </div>
+
+                  <p>
+                    4:3 is the default size for the .flex-video element, and the assumption for .flex-video for chrome (controls) height is based on YouTube.
+                  </p>
+                </div>
+                <div class="col-xx-12 col-sm-6 col-md-6">
+                  <div class="flex-video widescreen vimeo">
+                    <iframe src="http://player.vimeo.com/video/7449107" width="500" height="375" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                  </div>
+
+                  <p>
+                    Because Vimeo places their chrome on the player itself, adding a class of .vimeo creates a container that is sized for the video only — no extra padding for the controls.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <pre class="highlight">
+&lt;div class="flex-video">
+  &lt;iframe width="500" height="315" src="http://www.youtube.com/embed/c9MnSeYYtYY" frameborder="0" allowfullscreen>
+  &lt;/iframe>
+&lt;/div>
+</pre>            
+              
+              <p>
+                The available class options:
+              </p>
+
+              <ul class="disc">
+                <li><code>widescreen</code>: Will give the player a widescreen aspect ratio.</li>
+                <li><code>vimeo</code>: This will ensure that we don't add extra padding since Vimeo has controls within the player, itself.</li>
+              </ul>
+
+            
+
+
+          </section>
+
+          <!-- Testimonials
+          ================================================== -->
+          <section id="testimonial">
+            <div class="page-header">
+              <h1>Testimonial</h1>
+            </div>
+
+            <div class="bs-example">
+
+              <div class='testimonial'>
+                <blockquote>
+                  <em class="icon-quote-left"></em> Lorem ipsum sit dolor ares ameit. This could be a blockquote. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo tristique odio, quis fringilla.Vivamus nec sapien massa, a imperdiet diam.
+                </blockquote>
+                <p class='testimonial-footer'>
+                  <img data-src="holder.js/32x32" />
+                  <b>John Doe</b> &mdash; designer
+                </p>
+              </div>
+            </div>
+            <pre class="highlight">
+&lt;div class="testimonial">
+    &lt;blockquote>.....&lt;/blockquote>
+    &lt;p class="testimonial-footer">
+        &lt;img data-src="holder.js/32x32" />
+        &lt;b>John Doe&lt;/b> &mdash; designer
+    &lt;/p>
+&lt;/div>
+</pre>
+            <p>
+              Testimonials with right footer
+            </p>
+            <div class="bs-example">
+
+              <div class='testimonial'>
+                <blockquote>
+                  <em class="icon-quote-left"></em> Lorem ipsum sit dolor ares ameit. This could be a blockquote. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo tristique odio, quis fringilla.Vivamus nec sapien massa, a imperdiet diam.
+                </blockquote>
+                <p class='testimonial-footer pull-right'>
+                  <img data-src="holder.js/32x32" />
+                  <b>John Doe</b> &mdash; designer
+                </p>
+              </div>
+            </div>
+            <pre class="highlight">
+&lt;div class="testimonial">
+    &lt;blockquote>.....&lt;/blockquote>
+    &lt;p class="testimonial-footer pull-right">
+        &lt;img data-src="holder.js/32x32" />
+        &lt;b>John Doe&lt;/b> &mdash; designer
+    &lt;/p>
+&lt;/div>
+</pre>
+  
+            <h3>More colors ? No problem !</h3>
+            <div class="bs-example">
+
+              <div class='testimonial testimonial-primary'>
+                <blockquote>
+                  <em class="icon-quote-left"></em> Lorem ipsum sit dolor ares ameit. This could be a blockquote. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo tristique odio, quis fringilla.Vivamus nec sapien massa, a imperdiet diam.
+                </blockquote>
+                <p class='testimonial-footer'>
+                  <img data-src="holder.js/32x32" />
+                  <b>John Doe</b> &mdash; designer
+                </p>
+              </div>
+              <div class='testimonial testimonial-success'>
+                <blockquote>
+                  <em class="icon-quote-left"></em> Lorem ipsum sit dolor ares ameit. This could be a blockquote. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo tristique odio, quis fringilla.Vivamus nec sapien massa, a imperdiet diam.
+                </blockquote>
+                <p class='testimonial-footer pull-right'>
+                  <img data-src="holder.js/32x32" />
+                  <b>John Doe</b> &mdash; designer
+                </p>
+              </div>
+              <div class='testimonial testimonial-warning'>
+                <blockquote>
+                  <em class="icon-quote-left"></em> Lorem ipsum sit dolor ares ameit. This could be a blockquote. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo tristique odio, quis fringilla.Vivamus nec sapien massa, a imperdiet diam.
+                </blockquote>
+                <p class='testimonial-footer'>
+                  <img data-src="holder.js/32x32" />
+                  <b>John Doe</b> &mdash; designer
+                </p>
+              </div>
+              <div class='testimonial testimonial-danger'>
+                <blockquote>
+                  <em class="icon-quote-left"></em> Lorem ipsum sit dolor ares ameit. This could be a blockquote. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo tristique odio, quis fringilla.Vivamus nec sapien massa, a imperdiet diam.
+                </blockquote>
+                <p class='testimonial-footer pull-right'>
+                  <img data-src="holder.js/32x32" />
+                  <b>John Doe</b> &mdash; designer
+                </p>
+              </div>
+              <div class='testimonial testimonial-purple'>
+                <blockquote>
+                  <em class="icon-quote-left"></em> Lorem ipsum sit dolor ares ameit. This could be a blockquote. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo tristique odio, quis fringilla.Vivamus nec sapien massa, a imperdiet diam.
+                </blockquote>
+                <p class='testimonial-footer pull-left'>
+                  <img data-src="holder.js/32x32" />
+                  <b>John Doe</b> &mdash; designer
+                </p>
+              </div>
+              <div class='testimonial testimonial-info'>
+                <blockquote>
+                  <em class="icon-quote-left"></em> Lorem ipsum sit dolor ares ameit. This could be a blockquote. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo tristique odio, quis fringilla.Vivamus nec sapien massa, a imperdiet diam.
+                </blockquote>
+                <p class='testimonial-footer pull-right'>
+                  <img data-src="holder.js/32x32" />
+                  <b>John Doe</b> &mdash; designer
+                </p>
+              </div>
+              <div class='testimonial testimonial-dark'>
+                <blockquote>
+                  <em class="icon-quote-left"></em> Lorem ipsum sit dolor ares ameit. This could be a blockquote. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo tristique odio, quis fringilla.Vivamus nec sapien massa, a imperdiet diam.
+                </blockquote>
+                <p class='testimonial-footer pull-left'>
+                  <img data-src="holder.js/32x32" />
+                  <b>John Doe</b> &mdash; designer
+                </p>
+              </div>
+            </div>
+<pre class="highlight">
+&lt;div class="testimonial testimonial-primary"&gt;
+  ...
+&lt;/div&gt;
+&lt;div class="testimonial testimonial-success"&gt;
+  ...
+&lt;/div&gt;
+&lt;div class="testimonial testimonial-warning"&gt;
+  ...
+&lt;/div&gt;
+&lt;div class="testimonial testimonial-danger"&gt;
+  ...
+&lt;/div&gt;
+&lt;div class="testimonial testimonial-purple"&gt;
+  ...
+&lt;/div&gt;
+&lt;div class="testimonial testimonial-info"&gt;
+  ...
+&lt;/div&gt;
+&lt;div class="testimonial testimonial-dark"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+
+          
+          </section>
+
+          <!-- Flicker Feed
+          ================================================== -->
+          <section id="flicker">
+            <div class="page-header">
+              <h1>Flickr Gallery </h1>
+            </div>
+            <p>
+              Add class <code> .flickr-gallery</code>
+              to a list element. Then add the flickr directly from data attribute.
+            </p>
+            <div class="bs-example">
+              <ul class="gallery flickr-gallery" style="width: 350px" data-flickr-id="52617155@N08">
+                <!-- Auto filled with the Flickr Feed Plugin -->
+              </ul>
+
+            </div>
+<pre class="highlight">
+&lt;ul class="gallery flickr-gallery" style="width: 350px" data-flickr-id="52617155@N08"&gt;
+  &lt;!-- Auto filled with the Flickr Feed Plugin -->
+&lt;/ul&gt;
+</pre>                        
+
+            <h3>JavaScript</h3>
+            <p>
+              Copy this JavaScript inside your <code> $(document).ready()</code>
+            </p>
+            <pre class="highlight">
+$('.flickr-gallery').each(function(){
+  $(this).jflickrfeed({
+    limit: 12, // how many pictures to display
+    qstrings: {
+        id: $(this).data('flickr-id')
+    },
+    itemTemplate: '&lt;li&gt;&lt;a href="{{image_b}}"&gt;&lt;img alt="{{title}}" src="{{image_s}}" />&lt;/a&gt;&lt;/li&gt;'
+  });
+})
+</pre>            
+
+
+          <h3>Options</h3>
+          <table class="table table-bordered table-striped">
+            <thead>
+             <tr>
+               <th style="width: 150px;">Name</th>
+               <th style="width: 150px;">Type</th>
+               <th style="width: 100px">Default</th>
+               <th>Description</th>
+             </tr>
+            </thead>
+            <tbody>
+             <tr>
+               <td>data-flickr-id</td>
+               <td>string</td>
+               <td>''</td>
+               <td>This is your Flickr ID. You can get your Flickr ID for photos or groups from <a href="http://idgettr.com/">here</a>.</td>
+             </tr>
+            </tbody>
+          </table>
+
+          </section>
+
+
+          <!-- Pricing Table
+          ================================================== -->
+          <section id="pricing">
+            <div class="page-header">
+              <h1>Pricing Tables</h1>
+            </div>
+            <p>To create a pricing table add the class <code>pricing-table</code> to a <code>div</code> or <code>ul</code> and the class <code>price</code> to the direct child's.</p>
+            <p>Pricing table is adaptive, it fit on the width of the parent element.</p>
+            <div class="bs-example">
+              
+              <div class="pricing-table">
+                <div class="price">
+                  <div class="name">Free</div>
+                  <div class="lead">Free</div>
+                  <ul>
+                    <li>50GB Storage</li>
+                    <li>Unlimited Bandwidth</li>
+                    <li>1 Domain</li>
+                    <li>Unlimited Email accounts</li>
+                    <li>1 Database</li>
+                    <li>No support</li>
+                  </ul>
+                  <div class="lead">
+                    <button class="btn btn-primary btn-large">Select Plan</button>
+                  </div>
+                </div>
+
+                <div class="price featured">
+                  <div class="name">Baby</div>
+                  <div class="lead">$10/mon</div>
+                  <ul>
+                    <li>100GB Storage</li>
+                    <li>Unlimited Bandwidth</li>
+                    <li>10 Domains</li>
+                    <li>Unlimited Email accounts</li>
+                    <li>10 Databases</li>
+                    <li>7x24 Support</li>
+                  </ul>
+                  <div class="lead">
+                    <button class="btn btn-primary btn-large">Select Plan</button>
+                  </div>
+                </div>
+
+                <div class="price">
+                  <div class="name">Business</div>
+                  <div class="lead">$100/mon</div>
+                  <ul>
+                    <li>1TB Storage</li>
+                    <li>Unlimited Bandwidth</li>
+                    <li>Ultimited Domains</li>
+                    <li>Unlimited email accounts</li>
+                    <li>Unlimited Databases</li>
+                    <li>7x24 Support</li>
+                  </ul>
+                  <div class="lead">
+                    <button class="btn btn-primary btn-large">Select Plan</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+<pre class="highlight">
+&lt;div class="pricing-table"&gt;
+  &lt;div class="price"&gt;
+    &lt;div class="name"&gt;Free&lt;/div&gt;
+    &lt;div class="lead"&gt;Free&lt;/div&gt;
+    &lt;ul&gt;
+      &lt;li&gt;50GB Storage&lt;/li&gt;
+      &lt;li&gt;Unlimited Bandwidth&lt;/li&gt;
+      &lt;li&gt;1 Domain&lt;/li>
+      &lt;li&gt;Unlimited Email accounts&lt;/li&gt;
+      &lt;li&gt;1 Database&lt;/li&gt;
+      &lt;li&gt;No support&lt;/li&gt;
+    &lt;/ul>
+    &lt;div class="lead"&gt;
+      &lt;button class="btn btn-primary btn-large"&gt;Select Plan&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="price featured"&gt;
+    ...
+  &lt;/div&gt;
+
+  &lt;div class="price"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre> 
+
+            <h3>Spacing between the cols</h3>
+            <p>To add spaces between the pricing table cols, add <code>pricing-space</code> to the <code>pricing-table</code>.</p>
+            <div class="bs-example">
+              
+              <div class="pricing-table pricing-space">
+                <div class="price">
+                  <div class="name">Free</div>
+                  <div class="lead">Free</div>
+                  <ul>
+                    <li>50GB Storage</li>
+                    <li>Unlimited Bandwidth</li>
+                    <li>1 Domain</li>
+                    <li>Unlimited Email accounts</li>
+                    <li>1 Database</li>
+                    <li>No support</li>
+                  </ul>
+                  <div class="lead">
+                    <button class="btn btn-primary btn-large">Select Plan</button>
+                  </div>
+                </div>
+
+                <div class="price featured">
+                  <div class="name">Baby</div>
+                  <div class="lead">$10/mon</div>
+                  <ul>
+                    <li>100GB Storage</li>
+                    <li>Unlimited Bandwidth</li>
+                    <li>10 Domains</li>
+                    <li>Unlimited Email accounts</li>
+                    <li>10 Databases</li>
+                    <li>7x24 Support</li>
+                  </ul>
+                  <div class="lead">
+                    <button class="btn btn-primary btn-large">Select Plan</button>
+                  </div>
+                </div>
+
+                <div class="price">
+                  <div class="name">Business</div>
+                  <div class="lead">$100/mon</div>
+                  <ul>
+                    <li>1TB Storage</li>
+                    <li>Unlimited Bandwidth</li>
+                    <li>Ultimited Domains</li>
+                    <li>Unlimited email accounts</li>
+                    <li>Unlimited Databases</li>
+                    <li>7x24 Support</li>
+                  </ul>
+                  <div class="lead">
+                    <button class="btn btn-primary btn-large">Select Plan</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+<pre class="highlight">
+&lt;div class="pricing-table pricing-space"&gt;
+  &lt;div class="price"&gt;
+    &lt;div class="name"&gt;Free&lt;/div&gt;
+    &lt;div class="lead"&gt;Free&lt;/div&gt;
+    &lt;ul&gt;
+      &lt;li&gt;50GB Storage&lt;/li&gt;
+      &lt;li&gt;Unlimited Bandwidth&lt;/li&gt;
+      &lt;li&gt;1 Domain&lt;/li>
+      &lt;li&gt;Unlimited Email accounts&lt;/li&gt;
+      &lt;li&gt;1 Database&lt;/li&gt;
+      &lt;li&gt;No support&lt;/li&gt;
+    &lt;/ul>
+    &lt;div class="lead"&gt;
+      &lt;button class="btn btn-primary btn-large"&gt;Select Plan&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="price featured"&gt;
+    ...
+  &lt;/div&gt;
+
+  &lt;div class="price"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre> 
+
+            <h3>Let's bring some colors !</h3>
+            <div class="bs-example">
+              
+              <div class="pricing-table">
+                <div class="price price-primary">
+                  <div class="name">Primary</div>
+                  <div class="lead"><small>.price-primary</small></div>
+                  <ul>
+                    <li>1TB Storage</li>
+                    <li>Ultimited Domains</li>
+                    <li>Unlimited accounts</li>
+                    <li>7x24 Support</li>
+                  </ul>
+                  <div class="lead">
+                    <button class="btn btn-primary btn-large">Select Plan</button>
+                  </div>
+                </div>
+
+                <div class="price price-success">
+                  <div class="name">Success</div>
+                  <div class="lead"><small>.price-success</small></div>
+                  <ul>
+                    <li>1TB Storage</li>
+                    <li>Ultimited Domains</li>
+                    <li>Unlimited accounts</li>
+                    <li>7x24 Support</li>
+                  </ul>
+                  <div class="lead">
+                    <button class="btn btn-success btn-large">Select Plan</button>
+                  </div>
+                </div>
+
+                <div class="price price-warning">
+                  <div class="name">Warning</div>
+                  <div class="lead"><small>.price-warning</small></div>
+                  <ul>
+                    <li>1TB Storage</li>
+                    <li>Ultimited Domains</li>
+                    <li>Unlimited accounts</li>
+                    <li>7x24 Support</li>
+                  </ul>
+                  <div class="lead">
+                    <button class="btn btn-warning btn-large">Select Plan</button>
+                  </div>
+                </div>
+
+                <div class="price price-danger">
+                  <div class="name">Danger</div>
+                  <div class="lead"><small>.price-danger</small></div>
+                  <ul>
+                    <li>1TB Storage</li>
+                    <li>Ultimited Domains</li>
+                    <li>Unlimited accounts</li>
+                    <li>7x24 Support</li>
+                  </ul>
+                  <div class="lead">
+                    <button class="btn btn-danger btn-large">Select Plan</button>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="pricing-table">
+                <div class="price price-darkblue">
+                  <div class="name">Dark Blue</div>
+                  <div class="lead"><small>.price-darkblue</small></div>
+                  <ul>
+                    <li>1TB Storage</li>
+                    <li>Ultimited Domains</li>
+                    <li>Unlimited accounts</li>
+                    <li>7x24 Support</li>
+                  </ul>
+                  <div class="lead">
+                    <button class="btn btn-darkblue btn-large">Select Plan</button>
+                  </div>
+                </div>
+                <div class="price price-pink">
+                  <div class="name">Pink</div>
+                  <div class="lead"><small>.price-pink</small></div>
+                  <ul>
+                    <li>1TB Storage</li>
+                    <li>Ultimited Domains</li>
+                    <li>Unlimited accounts</li>
+                    <li>7x24 Support</li>
+                  </ul>
+                  <div class="lead">
+                    <button class="btn btn-pink btn-large">Select Plan</button>
+                  </div>
+                </div>
+                <div class="price price-purple">
+                  <div class="name">Purple</div>
+                  <div class="lead"><small>.price-purple</small></div>
+                  <ul>
+                    <li>1TB Storage</li>
+                    <li>Ultimited Domains</li>
+                    <li>Unlimited accounts</li>
+                    <li>7x24 Support</li>
+                  </ul>
+                  <div class="lead">
+                    <button class="btn btn-purple btn-large">Select Plan</button>
+                  </div>
+                </div>
+                <div class="price price-inverse">
+                  <div class="name">Inverse</div>
+                  <div class="lead"><small>.price-inverse</small></div>
+                  <ul>
+                    <li>1TB Storage</li>
+                    <li>Ultimited Domains</li>
+                    <li>Unlimited accounts</li>
+                    <li>7x24 Support</li>
+                  </ul>
+                  <div class="lead">
+                    <button class="btn btn-inverse btn-large">Select Plan</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+<pre class="highlight">
+&lt;div class="pricing-table"&gt;
+  &lt;div class="price price-primary"&gt;
+    ...
+  &lt;/div&gt;
+
+  &lt;div class="price price-success"&gt;
+    ...
+  &lt;/div&gt;
+
+  &lt;div class="price price-warning"&gt;
+    ...
+  &lt;/div&gt;
+
+  &lt;div class="price price-danger"&gt;
+    ...
+  &lt;/div&gt;
+
+  &lt;div class="price price-inverse"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre> 
+          </section>
+
+
+
+          <!-- Progress Bars
+          ================================================== -->
+          <section id="progress">
+            <div class="page-header">
+              <h1>Progress Bars</h1>
+            </div>
+
+            <h3>Radial progress bars</h3>
+            <div class="bs-example">
+
+              <div class="progress-radial progress-10">
+                <div class="overlay">10%</div>
+              </div>
+
+              <div class="progress-radial progress-primary progress-20">
+                <div class="overlay">20%</div>
+              </div>
+
+              <div class="progress-radial progress-darkblue progress-30">
+                <div class="overlay">30%</div>
+              </div>
+
+              <div class="progress-radial progress-success progress-40">
+                <div class="overlay">40%</div>
+              </div>
+
+              <div class="progress-radial progress-warning progress-50">
+                <div class="overlay">50%</div>
+              </div>
+
+              <div class="progress-radial progress-pink progress-60">
+                <div class="overlay">60%</div>
+              </div>
+
+              <div class="progress-radial progress-danger progress-70">
+                <div class="overlay">70%</div>
+              </div>
+
+              <div class="progress-radial progress-purple progress-80">
+                <div class="overlay">80%</div>
+              </div>
+
+              <div class="progress-radial progress-inverse progress-90">
+                <div class="overlay">90%</div>
+              </div>
+
+              <div class="clearfix"></div>
+
+            </div>
+
+<pre class="highlight">
+&lt;div class="progress-radial progress-10"&gt;
+  &lt;div class="overlay"&gt;10%&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="progress-radial progress-primary progress-20"&gt;
+  ...
+&lt;/div&gt;
+
+&lt;div class="progress-radial progress-darkblue progress-30"&gt;
+  ...
+&lt;/div&gt;
+
+&lt;div class="progress-radial progress-success progress-40"&gt;
+  ...
+&lt;/div&gt;
+
+&lt;div class="progress-radial progress-warning progress-50"&gt;
+  ...
+&lt;/div&gt;
+
+&lt;div class="progress-radial progress-pink progress-60"&gt;
+  ...
+&lt;/div>
+
+&lt;div class="progress-radial progress-danger progress-70"&gt;
+  ...
+&lt;/div>
+
+&lt;div class="progress-radial progress-purple progress-80"&gt;
+  ...
+&lt;/div>
+
+&lt;div class="progress-radial progress-inverse progress-90"&gt;
+  ...
+&lt;/div>
+
+</pre>
+          </section>
+
+         <section id="apopover">
+            <div class="page-header">
+              <h1>Popover with CSS3 animation</h1>
+            </div>
+      <div>
+          <ul class="popover-example">
+            <li>
+              <a data-original-title="Popover on top" data-animation="false" data-easein="fadeInUp" href="#" class="btn btn-primary" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">fade In Up</a>
+            </li>
+            <li><a data-original-title="Popover on right" data-animation="false" data-easein="fadeInRight" href="#" class="btn btn-primary" rel="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">fade In Right</a></li>
+            <li><a data-original-title="Popover on bottom" data-animation="false" data-easein="fadeInDown" href="#" class="btn btn-primary" rel="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">fade In Down</a></li>
+            <li><a data-original-title="Popover on left" data-animation="false" href="#" data-easein="fadeInLeft" class="btn btn-primary" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">fade In Left</a></li>
+            <br />
+            <li><a data-original-title="Popover on bottom" data-animation="false" data-easein="fadeInUpBig" href="#" class="btn" rel="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">fade In Up Big</a></li>
+            <li><a data-original-title="Popover on right" data-animation="false" data-easein="fadeInRightBig" href="#" class="btn" rel="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">fade In Right Big</a></li>
+            <li><a data-original-title="Popover on top" data-animation="false" data-easein="fadeInDownBig" href="#" class="btn" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">fade In Down Big</a></li>
+            <li><a data-original-title="Popover on left" data-animation="false" href="#" data-easein="fadeInLeftBig" class="btn" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">fade In Left Big</a></li>
+            <br />
+            <li>
+              <a data-original-title="Popover on top" data-animation="false" data-easein="bounceInDown" href="#" class="btn btn-inverse" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">bounce In Down</a>
+            </li>
+            <li><a data-original-title="Popover on right" data-animation="false" data-easein="bounceInRight" href="#" class="btn btn-inverse" rel="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">bounce In Right</a></li>
+            <li><a data-original-title="Popover on bottom" data-animation="false" data-easein="bounceInUp" href="#" class="btn btn-inverse" rel="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">bounce In Up</a></li>
+            <li><a data-original-title="Popover on left" data-animation="false" href="#" data-easein="bounceInLeft" class="btn btn-inverse" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet
+            rutrum faucibus.">bounce In Left</a></li>
+            <br />
+            <li><a data-original-title="Popover on bottom" data-animation="false" data-easein="rotateInDownLeft" href="#" class="btn" rel="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">rotate In Down Left</a></li>
+            <li><a data-original-title="Popover on right" data-animation="false" data-easein="rotateInDownRight" href="#" class="btn" rel="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">rotate In Down Right</a></li>
+            <li><a data-original-title="Popover on top" data-animation="false" data-easein="rotateInUpLeft" href="#" class="btn" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">rotate In Up Left</a></li>
+            <li><a data-original-title="Popover on left" data-animation="false" href="#" data-easein="rotateInUpRight" class="btn" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet
+            rutrum faucibus.">rotate In Up Right</a></li>
+            <br />
+            <li><a data-original-title="Popover on right" data-animation="false" data-easein="rotateIn" href="#" class="btn btn-info" rel="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">rotateIn</a></li>
+            <li><a data-original-title="Popover on left" data-animation="false" data-easein="bounce" href="#" class="btn btn-info" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">bounce</a></li>
+            <li><a data-original-title="Popover on left" data-animation="false" data-easein="wobble" href="#" class="btn btn-info" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">wobble</a></li>
+            <li><a data-original-title="Popover on top" data-animation="false" data-easein="shake" href="#" class="btn btn-info" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">shake</a></li>
+            <li><a data-original-title="Popover on left" data-animation="false" data-easein="tada" href="#" class="btn btn-info" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">tada</a></li>
+            <li><a data-original-title="Popover on top" data-animation="false" data-easein="swing" href="#" class="btn btn-info" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">swing</a></li>
+            <li><a data-original-title="Popover on left" data-animation="false" data-easein="wiggle" href="#" class="btn btn-info" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">wiggle</a></li>
+            <li><a data-original-title="Popover on left" data-animation="false" data-easein="pulse" href="#" class="btn btn-info" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">pulse</a></li>
+            <li><a data-original-title="Popover on left" data-animation="false" data-easein="lightSpeedIn" href="#" class="btn btn-info" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">lightSpeedIn</a></li>
+            <li><a data-original-title="Popover on left" data-animation="false" data-easein="rollIn" href="#" class="btn btn-info" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">rollIn</a></li>
+            <br />
+            <li><a data-original-title="Popover on left" data-animation="false" data-easein="flipInX" href="#" class="btn btn-success" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">flipInX</a></li>
+            <li><a data-original-title="Popover on left" data-animation="false" data-easein="flipInY" href="#" class="btn btn-success" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">flipInY</a></li>
+          </ul>
+      </div>
+
+         </section>
+
+      
+      <section id="atabs">
+            <div class="page-header">
+              <h1>Tabs with CSS3 animation</h1>
+            </div>
+
+    <div class="tabbable">
+     <ul class="nav nav-tabs" id="myTab1">
+        <li class="active"><a href="#home">Home</a></li>
+        <li><a href="#profile" data-easein="fadeInRight">Profile</a></li>
+        <li><a href="#messages" data-easein="fadeInDown">Messages</a></li>
+        <li><a href="#settings" data-easein="fadeInUp">Settings</a></li>
+        <li><a href="#other">Other</a></li>
+    </ul>
+
+    <div class="tab-content" id="tab-content1">
+        <div class="tab-pane active" id="home">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate officiis eos excepturi est pariatur repudiandae repellat atque hic molestiae ut aperiam quae quia iure fugiat alias placeat illo perferendis explicabo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam tempora eos unde ea consectetur debitis repellendus perferendis tempore asperiores illum! Tempora vero fuga nostrum alias inventore voluptatem odio laboriosam suscipit.</div>
+        <div class="tab-pane" id="profile">Dicta illum voluptates cum consectetur expedita nostrum totam laborum ipsam quia reiciendis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti sint quisquam nemo iusto explicabo fugiat minus a necessitatibus</div>
+        <div class="tab-pane" id="messages">The third tab here. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti sint quisquam nemo iusto explicabo fugiat minus a necessitatibus.</div>
+        <div class="tab-pane" id="settings">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti sint quisquam nemo iusto explicabo fugiat minus a necessitatibus</div>
+        <div class="tab-pane" id="other">The last tab here. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti sint quisquam nemo iusto explicabo fugiat minus a necessitatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit ab a fugiat cumque tempora illum perferendis velit reiciendis tempore natus excepturi molestiae! Nihil ab deleniti velit vero cum temporibus ea.</div>
+    </div>
+  </div>
+
+      </section>
+
+<hr>
+
+<section id="availableAnimations">
+<h2>Available animations</h2>
+<p>You can use animations by adding <code>data-easein=""</code> or <code>data-easeout=""</code> and animation name.</p>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Animation name (class)</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>fadeInUp</code></td>
+      <td><a data-original-title="Popover on top" data-animation="false" data-easein="fadeInUp" href="#" class="btn btn-primary" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">fade In Up</a></td>
+    </tr>
+    <tr>
+      <td><code>fadeInRight</code></td>
+      <td><a data-original-title="Popover on right" data-animation="false" data-easein="fadeInRight" href="#" class="btn btn-primary" rel="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">fade In Right</a></td>
+    </tr>
+    <tr>
+      <td><code>fadeInDown</code></td>
+      <td><a data-original-title="Popover on bottom" data-animation="false" data-easein="fadeInDown" href="#" class="btn btn-primary" rel="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">fade In Down</a></td>
+    </tr>
+    <tr>
+      <td><code>fadeInLeft</code></td>
+      <td><a data-original-title="Popover on left" data-animation="false" href="#" data-easein="fadeInLeft" class="btn btn-primary" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">fade In Left</a></td>
+    </tr>
+    <tr>
+      <td><code>fadeInUpBig</code></td>
+      <td><a data-original-title="Popover on bottom" data-animation="false" data-easein="fadeInUpBig" href="#" class="btn" rel="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">fade In Up Big</a></td>
+    </tr>
+    <tr>
+      <td><code>fadeInRightBig</code></td>
+      <td><a data-original-title="Popover on right" data-animation="false" data-easein="fadeInRightBig" href="#" class="btn" rel="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">fade In Right Big</a></td>
+    </tr>
+    <tr>
+      <td><code>fadeInDownBig</code></td>
+      <td><a data-original-title="Popover on top" data-animation="false" data-easein="fadeInDownBig" href="#" class="btn" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">fade In Down Big</a></td>
+    </tr>
+    <tr>
+      <td><code>fadeInLeftBig</code></td>
+      <td><a data-original-title="Popover on left" data-animation="false" href="#" data-easein="fadeInLeftBig" class="btn" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">fade In Left Big</a></td>
+    </tr>
+    <tr>
+      <td><code>bounceInDown</code></td>
+      <td><a data-original-title="Popover on top" data-animation="false" data-easein="bounceInDown" href="#" class="btn btn-inverse" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">bounce In Down</a></td>
+    </tr>
+    <tr>
+      <td><code>bounceInRight</code></td>
+      <td><a data-original-title="Popover on right" data-animation="false" data-easein="bounceInRight" href="#" class="btn btn-inverse" rel="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">bounce In Right</a></td>
+    </tr>
+    <tr>
+      <td><code>bounceInUp</code></td>
+      <td><a data-original-title="Popover on bottom" data-animation="false" data-easein="bounceInUp" href="#" class="btn btn-inverse" rel="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">bounce In Up</a></td>
+    </tr>
+    <tr>
+      <td><code>bounceInLeft</code></td>
+      <td><a data-original-title="Popover on left" data-animation="false" href="#" data-easein="bounceInLeft" class="btn btn-inverse" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">bounce In Left</a></td>
+    </tr>
+    <tr>
+      <td><code>rotateInDownLeft</code></td>
+      <td><a data-original-title="Popover on bottom" data-animation="false" data-easein="rotateInDownLeft" href="#" class="btn" rel="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">rotate In Down Left</a></td>
+    </tr>
+    <tr>
+      <td><code>rotateInDownRight</code></td>
+      <td><a data-original-title="Popover on right" data-animation="false" data-easein="rotateInDownRight" href="#" class="btn" rel="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">rotate In Down Right</a></td>
+    </tr>
+    <tr>
+      <td><code>rotateInUpLeft</code></td>
+      <td><a data-original-title="Popover on top" data-animation="false" data-easein="rotateInUpLeft" href="#" class="btn" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">rotate In Up Left</a></td>
+    </tr>
+    <tr>
+      <td><code>rotateInUpRight</code></td>
+      <td><a data-original-title="Popover on left" data-animation="false" href="#" data-easein="rotateInUpRight" class="btn" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">rotate In Up Right</a></td>
+    </tr>
+    <tr>
+      <td><code>rotateIn</code></td>
+      <td><a data-original-title="Popover on right" data-animation="false" data-easein="rotateIn" href="#" class="btn btn-info" rel="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">rotateIn</a></td>
+    </tr>
+    <tr>
+      <td><code>bounce</code></td>
+      <td><a data-original-title="Popover on left" data-animation="false" data-easein="bounce" href="#" class="btn btn-info" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">bounce</a></td>
+    </tr>
+    <tr>
+      <td><code>wobble</code></td>
+      <td><a data-original-title="Popover on left" data-animation="false" data-easein="wobble" href="#" class="btn btn-info" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">wobble</a></td>
+    </tr>
+    <tr>
+      <td><code>shake</code></td>
+      <td><a data-original-title="Popover on top" data-animation="false" data-easein="shake" href="#" class="btn btn-info" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">shake</a></td>
+    </tr>
+    <tr>
+      <td><code>tada</code></td>
+      <td><a data-original-title="Popover on left" data-animation="false" data-easein="tada" href="#" class="btn btn-info" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">tada</a></td>
+    </tr>
+    <tr>
+      <td><code>swing</code></td>
+      <td><a data-original-title="Popover on top" data-animation="false" data-easein="swing" href="#" class="btn btn-info" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">swing</a></td>
+    </tr>
+    <tr>
+      <td><code>wiggle</code></td>
+      <td><a data-original-title="Popover on left" data-animation="false" data-easein="wiggle" href="#" class="btn btn-info" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">wiggle</a></td>
+    </tr>
+    <tr>
+      <td><code>pulse</code></td>
+      <td><a data-original-title="Popover on left" data-animation="false" data-easein="pulse" href="#" class="btn btn-info" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">pulse</a></td>
+    </tr>
+    <tr>
+      <td><code>lightSpeedIn</code></td>
+      <td><a data-original-title="Popover on left" data-animation="false" data-easein="lightSpeedIn" href="#" class="btn btn-info" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">lightSpeedIn</a></td>
+    </tr>
+    <tr>
+      <td><code>rollIn</code></td>
+      <td><a data-original-title="Popover on left" data-animation="false" data-easein="rollIn" href="#" class="btn btn-info" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">rollIn</a></td>
+    </tr>
+    <tr>
+      <td><code>flipInX</code></td>
+      <td><a data-original-title="Popover on left" data-animation="false" data-easein="flipInX" href="#" class="btn btn-success" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">flipInX</a></td>
+    </tr>
+    <tr>
+      <td><code>flipInY</code></td>
+      <td><a data-original-title="Popover on left" data-animation="false" data-easein="flipInY" href="#" class="btn btn-success" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">flipInY</a></td>
+    </tr>
+  </tbody>
+</table>
+
+</section>
+
+      <hr>
+
+      <section id="aicons">
+            <div class="page-header">
+              <h1>Icons with CSS3 animation</h1>
+            </div>
+      <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>Class</th>
+        <th class="span2">Default Repeats</th>
+                <th class="span3">Sample Preview</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>.icon-animation-pulsing</code></td>
+        <td>2</td>
+                <td><button class="btn btn-mini btn-default"><i class="icon-heart icon-whitex icon-animation-pulsing"></i> Pulsing</button></td>
+              </tr>
+              <tr>
+                <td><code>.icon-animation-fading-in</code></td>
+        <td>1</td>
+                <td><button class="btn btn-small btn-success"><i class="icon-ok icon-white icon-animation-fading-in"></i> Fading In</button></td>
+              </tr>
+              <tr>
+                <td><code>.icon-animation-fading-out</code></td>
+        <td>1</td>
+                <td><button class="btn btn-default btn-danger"><i class="icon-remove icon-white icon-animation-fading-out"></i> Fading Out</button></td>
+              </tr>
+              <tr>
+                <td><code>.icon-animation-spinning</code></td>
+        <td>1</td>
+                <td><button class="btn btn-large btn-primary"><i class="icon-repeat icon-white icon-animation-spinning"></i> Spinning</button></td>
+              </tr>
+              <tr>
+                <td><code>.icon-animation-spinning-invert</code></td>
+        <td>1</td>
+                <td><button class="btn btn-mini btn-info"><i class="icon-refresh icon-white icon-animation-spinning-invert"></i> Spinning Invert</button></td>
+              </tr>
+             <tr>
+                <td><code>.icon-animation-jumping-left</code></td>
+                <td>2</td>
+        <td><button class="btn btn-large btn-link"><i class="icon-hand-left icon-whitex icon-animation-jumping-left"></i> Jumping left</button></td>
+              </tr>
+             <tr>
+                <td><code>.icon-animation-jumping-right</code></td>
+                <td>2</td>
+        <td><button class="btn btn-default btn-default"><i class="icon-hand-right icon-whitex icon-animation-jumping-right"></i> Jumping right</button></td>
+              </tr>
+             <tr>
+                <td><code>.icon-animation-shake</code></td>
+                <td>2</td>
+        <td><button class="btn btn-large btn-primary"><i class="icon-trash icon-white icon-animation-shake"></i> Shake</button></td>
+              </tr>
+             <tr>
+                <td><code>.icon-animation-shake-vertical</code></td>
+        <td>2</td>
+                <td><button class="btn btn-mini btn-info"><i class="icon-gift icon-white icon-animation-shake-vertical"></i> Shake Vertical</button></td>
+              </tr>
+             <tr>
+                <td><code>.icon-animation-shake-horizontal</code></td>
+        <td>2</td>
+                <td><button class="btn btn-small btn-warning"><i class="icon-leaf icon-white icon-animation-shake-horizontal"></i> Shake Horizontal</button></td>
+              </tr>
+             <tr>
+                <td><code>.icon-animation-hiding</code></td>
+        <td>1</td>
+                <td><button class="btn btn-default btn-inverse"><i class="icon-fire icon-white icon-animation-hiding"></i> Hiding</button></td>
+              </tr>
+             <tr>
+                <td><code>.icon-animation-showing</code></td>
+        <td>1</td>
+                <td><button class="btn btn-large btn-link"><i class="icon-off icon-whitex icon-animation-showing"></i> Showing</button></td>
+              </tr>
+             <tr>
+                <td><code>.icon-animation-flip-vertical</code></td>
+        <td>3</td>
+                <td><button class="btn btn-default btn-success"><i class="icon-off icon-white icon-animation-flip-vertical"></i> Flip vertical</button></td>
+              </tr>
+             <tr>
+                <td><code>.icon-animation-flip-horizontal</code></td>
+        <td>3</td>
+                <td><button class="btn btn-large btn-danger"><i class="icon-off icon-white icon-animation-flip-horizontal"></i> Flip horizontal</button></td>
+              </tr>
+            </tbody>
+      </table>
+
+      <h2 id="iterations">Animations iterations</h2>
+      <br>
+      <p>You can control times to repeat animations with <code>animation-repeeat-*</code> classes.</p><br>
+      
+      <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>Class</th>
+                <th class="span3">Preview</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>.icon-animation-pulsing.animation-repeat-1</code></td>
+                <td><button class="btn btn-large btn-default"><i class="icon-heart icon-whitex icon-animation-pulsing animation-repeat-1 animate-fast-speed"></i> 1 time</button></td>
+              </tr>
+              <tr>
+                <td><code>.icon-animation-pulsing.animation-repeat-2</code></td>
+                <td><button class="btn btn-large btn-default"><i class="icon-heart icon-whitex icon-animation-pulsing animation-repeat-2 animate-fast-speed"></i> 2 times</button></td>
+              </tr>
+              <tr>
+                <td><code>.icon-animation-pulsing.animation-repeat-3</code></td>
+                <td><button class="btn btn-large btn-default"><i class="icon-heart icon-whitex icon-animation-pulsing animation-repeat-3 animate-fast-speed"></i> 3 times</button></td>
+              </tr>
+              <tr>
+                <td><code>.icon-animation-pulsing.animation-repeat-4</code></td>
+                <td><button class="btn btn-large btn-default"><i class="icon-heart icon-whitex icon-animation-pulsing animation-repeat-4 animate-fast-speed"></i> 4 times</button></td>
+              </tr>
+              <tr>
+                <td><code>.icon-animation-pulsing.animation-repeat-5</code></td>
+                <td><button class="btn btn-large btn-default"><i class="icon-heart icon-whitex icon-animation-pulsing animation-repeat-5 animate-fast-speed"></i> 5 times</button></td>
+              </tr>
+              <tr>
+                <td><code>.icon-animation-pulsing.animation-repeat-infinite</code></td>
+                <td><button class="btn btn-large btn-default"><i class="icon-heart icon-whitex icon-animation-pulsing animation-repeat-infinite animate-fast-speed"></i> Loop</button></td>
+              </tr>
+            </tbody>
+      </table>
+
+      </section>
+
+
+
+        </div>
+      </div>
+
+    </div>
+
+
+
+<!-- Footer
+================================================== -->
+<footer class="bs-footer2" role="contentinfo">
+    <p>Using <a href="http://getbootstrap.com/">Twitter Bootstrap</a> with a fancy skin by <a href="http://alex-design.info" target="_blank">Alexandru Tasica</a> (<a href="http://codecanyon.net/user/varcolac1000" target="_blank">CodeCanyon</a>).</p>
+</footer>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="dist/js/bootstrap.js"></script>
+
+<script src="http://platform.twitter.com/widgets.js"></script>
+<script src="assets/js/holder.js"></script>
+
+<script src="assets/js/application.js"></script>
+
+
+</body>
+</html>
