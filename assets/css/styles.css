@@ -1,4 +1,4 @@
-/*   
+/*
  * Template Name: PrettyDocs - Responsive Website Template for documentations
  * Version: 1.0
  * Author: Xiaoying Riley
@@ -1078,7 +1078,7 @@ select {
 /* ======= Landing Page ======= */
 .landing-page .header {
   background: #494d55;
-  color: rgba(255, 255, 255, 0.85);
+  color: #F88C30;
   padding: 60px 0;
 }
 .landing-page .header a {
@@ -1099,7 +1099,7 @@ select {
 }
 .landing-page .branding .icon {
   font-size: 32px;
-  color: #40babd;
+  color: #F88C30;
 }
 .landing-page .tagline {
   font-weight: 600;
